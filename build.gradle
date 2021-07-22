@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+}
+
+group 'com.gruporbs'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'junit:junit:4.13'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    implementation 'io.cucumber:cucumber-java:6.8.1'
+    implementation 'io.cucumber:cucumber-junit:6.8.1'
+    implementation 'org.jetbrains:annotations:20.1.0'
+}
+
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+task cucumber() {
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = ['--plugin', 'pretty','--glue' , 'StepDefinition', 'src/test/resources/Functionalities']
+        }
+    }
+}
+
+test {
+    systemProperty "env", System.getProperty("env")?:"hlg"
+    useJUnit()
+}

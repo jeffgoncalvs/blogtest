@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Blog Hypelame" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-07-22T01:37:18" hostname="RBSM0027.local" time="9.245">
+  <properties/>
+  <testcase name="Acessar publicações" classname="Blog Hypelame" time="4.869"/>
+  <testcase name="Buscar post por um termo" classname="Blog Hypelame" time="4.376"/>
+  <system-out><![CDATA[webdriver.chrome.driver:/Users/jefgoncalves/Documents/workspace/blog/src/main/resources/ios/chromedriver
+Acessei o blog da HypeFlame na URL:https://hypeflame.blog/
+Estou na tela inicial do blog
+Cliquei na publicação
+Estou na tela do post
+webdriver.chrome.driver:/Users/jefgoncalves/Documents/workspace/blog/src/main/resources/ios/chromedriver
+Acessei o blog da HypeFlame na URL:https://hypeflame.blog/
+Estou na tela inicial do blog
+Cliquei no botão da pesquisa
+realizei uma pesquisa com o termo: TESTE
+estou na tela de resultado da pesquisa do termo: TESTE
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 91.0.4472.101 (af52a90bf87030dd1523486a1cd3ae25c5d76c9b-refs/branch-heads/4472@{#1462}) on port 26604
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1626917840.156][WARNING]: This version of ChromeDriver has not been tested with Chrome version 92.
+Jul 21, 2021 10:37:20 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 91.0.4472.101 (af52a90bf87030dd1523486a1cd3ae25c5d76c9b-refs/branch-heads/4472@{#1462}) on port 22286
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1626917844.197][WARNING]: This version of ChromeDriver has not been tested with Chrome version 92.
+Jul 21, 2021 10:37:24 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
